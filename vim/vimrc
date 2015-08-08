@@ -73,7 +73,7 @@ let mapleader="\<Space>"
 " Colorscheme and customization -------------{{{
 set t_Co=256
 set background=dark
-colorscheme Monokai-chris
+colorscheme Monokai
 
 augroup foldSpaceOrientedSyntax
   autocmd!
@@ -270,8 +270,6 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set smarttab
-
-autocmd BufEnter * Rvm
 
 set shell=/bin/sh
 
