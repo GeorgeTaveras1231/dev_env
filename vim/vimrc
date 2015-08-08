@@ -1,0 +1,298 @@
+scriptencoding utf-8
+set encoding=utf-8
+
+syntax on
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+" Plugins ---------------------{{{
+Plugin 'gmarik/Vundle.vim'
+
+" Visual {{{
+Plugin 'flazz/vim-colorschemes'
+Plugin 'Yggdroot/indentLine'
+Plugin 'bling/vim-airline'
+Plugin 'blueyed/vim-diminactive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+" }}}
+
+" Langs {{{
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'stephpy/vim-yaml'
+Plugin 'vim-scripts/vim-coffee-script'
+Plugin 'vim-erlang/vim-erlang-runtime'
+Plugin 'othree/yajs.vim'
+Plugin 'ekalinin/Dockerfile.vim'
+" }}}
+
+" Integration {{{
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rvm'
+Plugin 'thoughtbot/vim-rspec'
+" }}}
+
+" Tools {{{
+Plugin 'terryma/vim-expand-region'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'rizzatti/dash.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'jgdavey/tslime.vim'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-endwise'
+Plugin 'Raimondi/delimitMate'
+" }}}
+"}}}
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+" filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins<cr>
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" " see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"
+"
+let mapleader="\<Space>"
+" Colorscheme and customization -------------{{{
+set t_Co=256
+set background=dark
+colorscheme Monokai-chris
+
+augroup foldSpaceOrientedSyntax
+  autocmd!
+  autocmd BufNewFile,BufReadPost *.{coffee,yml} setl foldmethod=indent
+augroup END
+
+augroup cursorLineAndColumn
+  autocmd!
+  autocmd WinLeave * set nocursorline nocursorcolumn
+  autocmd WinEnter * set cursorline cursorcolumn
+  set cursorcolumn cursorline
+augroup END
+
+augroup toggleInsertMode " {{{
+  autocmd!
+  autocmd insertEnter * hi CursorColumn ctermbg=darkred
+  autocmd insertLeave * hi CursorColumn ctermbg=233
+augroup END
+"}}}
+augroup changePanes "{{{
+  autocmd!
+  autocmd BufEnter * setlocal number
+  autocmd BufLeave * setlocal nonumber
+  setlocal number
+augroup END
+"}}}
+
+augroup trailingWhiteSpace
+  autocmd!
+  autocmd BufWritePre * try | %s/ \+$// | catch | | endtry
+augroup END
+
+function! MoveFile()
+  let full_path_current_file = expand("%:p")
+  let new_file_name = input('Move file to: ', full_path_current_file, "file")
+  bd
+  execute "silent !mv ".full_path_current_file." ".new_file_name
+  execute "e ".new_file_name
+  redraw
+endfunction
+
+command! MoveFile :call MoveFile()
+
+set numberwidth=5
+" key_mappings:
+
+nnoremap \| :NERDTreeToggle<CR>
+
+nnoremap <leader>m :MoveFile<CR>
+
+"MAPPINGS move lines of text up and down {{{
+nnoremap <C-k> dd:normal! k<cr>:put!<cr>
+nnoremap <C-j> ddp
+vnoremap <C-k> X<Up>P`[v`]
+vnoremap <C-j> X<Down>P`[v`]
+"}}}
+inoremap jk <Esc>
+
+nnoremap <silent> <leader>h :Dash<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+"  ------FLY-----
+vnoremap " :<c-u>normal! `><cr>a"<Esc>:<c-u>normal! `<<cr>i"<Esc>el
+vnoremap ' :<c-u>normal! `><cr>a'<Esc>:<c-u>normal! `<<cr>i'<Esc>el
+vnoremap ( :<c-u>normal! `><cr>a)<Esc>:<c-u>normal! `<<cr>i(<Esc>el
+vnoremap [ :<c-u>normal! `><cr>a]<Esc>:<c-u>normal! `<<cr>i[<Esc>el
+vnoremap { :<c-u>normal! `><cr>a}<Esc>:<c-u>normal! `<<cr>i{<Esc>el
+vnoremap <Space> :<c-u>normal! `><cr>a <Esc>:<c-u>normal! `<<cr>i <Esc>el
+
+inoremap <Esc>   <nop>
+nnoremap <Up>    2<C-w>+
+nnoremap <Down>  2<C-w>-
+nnoremap <Left>  2<C-w><
+nnoremap <Right> 2<C-w>>
+
+nnoremap { :tabprev<cr>
+nnoremap <C-t> :tabnew<cr>
+nnoremap } :tabnext<cr>
+
+
+nnoremap H ^
+nnoremap L $
+onoremap H ^
+onoremap L $
+vnoremap H ^
+vnoremap L $
+
+onoremap il( :<c-u>normal! f(vi(<cr>
+onoremap ih( :<c-u>normal! F(vi(<cr>
+
+onoremap il[ :<c-u>normal! f[vi[<cr>
+onoremap ih[ :<c-u>normal! F[vi[<cr>
+
+onoremap il{ :<c-u>normal! f{vi{<cr>
+onoremap ih{ :<c-u>normal! F{vi{<cr>
+
+onoremap il" :<c-u>normal! f"vi"<cr>
+onoremap ih" :<c-u>normal! F"vi"<cr>
+
+onoremap il' :<c-u>normal! f'vi'<cr>
+onoremap ih' :<c-u>normal! F'vi'<cr>
+
+nnoremap <C-l> e
+nnoremap <C-h> b
+vnoremap <C-l> e
+vnoremap <C-h> b
+onoremap <C-l> e
+onoremap <C-h> b
+
+nnoremap <C-d> *
+
+nnoremap E ea
+nnoremap B bi
+nnoremap W wi
+
+nnoremap <Leader>r :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>s :call RunNearestSpec()<CR>
+nnoremap <Leader>l :call RunLastSpec()<CR>
+nnoremap <Leader>a :call RunAllSpecs()<CR>
+
+nnoremap <silent><leader>, :nohl<CR>
+
+nnoremap <silent><leader>c :!ctags -R --languages=ruby --exclude=.git --exclude=log . &<CR>
+
+nnoremap <leader>o :CtrlP<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+
+" copy and paste into system clipboard
+vnoremap <leader>y "+y
+vnoremap <leader>d "+d
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+nnoremap <leader>ga :Gwrite<CR>:e<CR>
+nnoremap <leader>v :vs<CR>
+" Overides rspec nearest spec...
+nnoremap <leader>s :sp<CR>
+nnoremap <leader>e :e<CR>
+
+" force vp to not replace buffer
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+
+vmap <silent> <expr> p <sid>Repl()
+
+noremap gv `[v`]`
+
+" " https://github.com/end_key_mappings
+
+hi OverLength ctermbg=1 ctermfg=white
+match OverLength /\%81v.\+/
+
+set colorcolumn=80
+set list listchars=tab:›•,trail:░,eol:¬
+
+set laststatus=2
+
+set autoindent
+
+" Vimscript file settings --------------------------{{{
+augroup filetype_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+set t_ut=
+
+hi NonText ctermbg=NONE
+
+hi CursorColumn cterm=NONE ctermbg=233
+hi CursorLine   cterm=NONE ctermbg=234
+
+let g:indentLine_char='┊'
+let g:indentLine_color_term = 239
+
+" disable fold for now
+set nofoldenable
+
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+
+autocmd BufEnter * Rvm
+
+set shell=/bin/sh
+
+if !empty($TMUX)
+  let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
+endif
+
+set hlsearch
+set incsearch
+
+let g:airline#extensions#tabline#enabled = 1
+
+set backspace=2
+
+let b:javascript_fold = 1
+
+let g:ctrlp_use_caching = 0
+set grepprg=ag\ --nogroup\ --nocolor
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" Hilight search in Monokai HACK
+hi Search ctermbg=44B449
+
+let g:ctrlp_show_hidden = 1
