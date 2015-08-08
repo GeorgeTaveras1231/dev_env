@@ -1,0 +1,24 @@
+[rerere]
+  enabled = 1
+[include]
+  path = ~/.gitaliases
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = auto
+[gc]
+  auto = 1
+[user]
+  email = gtaveras@xogrp.com
+  name = George Taveras
+
+[core]
+	editor = vim
+[merge]
+	conflictstyle = diff3
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
