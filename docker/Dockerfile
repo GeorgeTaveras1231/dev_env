@@ -6,8 +6,14 @@ ENV HOME='/root'
 ENV TERM=screen-256color
 
 RUN apt-get update && \
-    # Install vim, ssh and ruby
-    apt-get install -y ca-certificates git-core ssh vim python-software-properties software-properties-common ruby && \
+    apt-get install -y ca-certificates \
+                       git-core \
+                       ssh \
+                       vim \
+                       python-software-properties \
+                       software-properties-common \
+                       silversearcher-ag \
+                       ruby && \
     add-apt-repository -y ppa:pi-rho/dev && \
     apt-get update && \
     # Install tmux 2.0
