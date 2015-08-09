@@ -3,6 +3,7 @@ FROM ubuntu
 MAINTAINER "George Taveras <george.taveras1231@gmail.com>"
 
 ENV HOME='/root'
+ENV TERM=screen-256color
 
 RUN apt-get update && \
     # Install vim, ssh and ruby
