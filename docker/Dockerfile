@@ -38,3 +38,6 @@ RUN ln -s $HOME/dev_env/vim/vimrc       $HOME/.vimrc && \
 RUN git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 RUN vim +PluginInstall +qall -u $HOME/.plugins.vim
 
+WORKDIR $HOME
+
+CMD /bin/bash
