@@ -21,9 +21,11 @@ RUN apt-get update && \
 
 RUN mkdir $HOME/.ssh
 ADD ssh/ $HOME/.ssh/
-RUN chmod 600 $HOME/.ssh/id_rsa
+RUN chmod 600 $HOME/.ssh/*
 
 RUN ssh-keyscan github.com >> $HOME/.ssh/known_hosts
+RUN ssh-keyscan git.xogrp.com >> $HOME/.ssh/known_hosts
+
 RUN git clone git@github.com:GeorgeTaveras1231/dev_env.git $HOME/dev_env
 
 RUN ln -s $HOME/dev_env/vim/vimrc       $HOME/.vimrc && \
