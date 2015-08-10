@@ -28,14 +28,14 @@ RUN ssh-keyscan git.xogrp.com >> $HOME/.ssh/known_hosts
 
 RUN git clone git@github.com:GeorgeTaveras1231/dev_env.git $HOME/dev_env
 
-RUN ln -s $HOME/dev_env/vim/vimrc       $HOME/.vimrc && \
-    ln -s $HOME/dev_env/vim/plugins.vim $HOME/.plugins.vim && \
-    ln -s $HOME/dev_env/tmux/tmux.conf  $HOME/.tmux.conf && \
+RUN mkdir $HOME/.tmux && \
+    ln -s $HOME/dev_env/vim/vimrc               $HOME/.vimrc && \
+    ln -s $HOME/dev_env/vim/plugins.vim         $HOME/.plugins.vim && \
+    ln -s $HOME/dev_env/tmux/tmux.conf          $HOME/.tmux.conf && \
     ln -s $HOME/dev_env/bash/bash_profile.bash  $HOME/.bash_profile && \
-    mkdir $HOME/.tmux && \
     ln -s $HOME/dev_env/tmux/tmux_git_branch.rb $HOME/.tmux/ && \
-    ln -s $HOME/dev_env/git/gitconfig              $HOME/.gitconfig && \
-    ln -s $HOME/dev_env/git/gitaliases             $HOME/.gitaliases
+    ln -s $HOME/dev_env/git/gitconfig           $HOME/.gitconfig && \
+    ln -s $HOME/dev_env/git/gitaliases          $HOME/.gitaliases
 
 RUN git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 RUN vim +PluginInstall +qall -u $HOME/.plugins.vim
