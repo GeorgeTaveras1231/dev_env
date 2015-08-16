@@ -32,6 +32,7 @@ Plugin 'vim-scripts/vim-coffee-script'
 Plugin 'vim-erlang/vim-erlang-runtime'
 Plugin 'othree/yajs.vim'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'evanmiller/nginx-vim-syntax'
 " }}}
 
 " Integration {{{
