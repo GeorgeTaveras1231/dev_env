@@ -13,6 +13,7 @@ RUN apt-get update && \
                        python-software-properties \
                        software-properties-common \
                        silversearcher-ag \
+                       man \
                        wget \
                        ruby && \
     add-apt-repository -y ppa:pi-rho/dev && \
