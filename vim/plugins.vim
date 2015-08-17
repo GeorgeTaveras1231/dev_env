@@ -52,6 +52,7 @@ Plugin 'jgdavey/tslime.vim'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
+Plugin 'rking/ag.vim'
 " }}}
 "}}}
 " All of your Plugins must be added before the following line

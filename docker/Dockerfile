@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM jpetazzo/dind
 
 MAINTAINER "George Taveras <george.taveras1231@gmail.com>"
 
@@ -13,11 +13,15 @@ RUN apt-get update && \
                        python-software-properties \
                        software-properties-common \
                        silversearcher-ag \
+                       wget \
                        ruby && \
     add-apt-repository -y ppa:pi-rho/dev && \
-    apt-get update && \
     # Install tmux 2.0
+    apt-get update && \
     apt-get install -y tmux=2.0-1~ppa1~t
+
+RUN wget -qO- https://bootstrap.pypa.io/get-pip.py | python
+RUN pip install -U docker-compose
 
 RUN mkdir $HOME/.ssh
 ADD ssh/ $HOME/.ssh/
