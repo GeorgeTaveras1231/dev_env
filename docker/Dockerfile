@@ -4,6 +4,7 @@ MAINTAINER "George Taveras <george.taveras1231@gmail.com>"
 
 ENV HOME='/root'
 ENV TERM=screen-256color
+ENV DEV_ENV_VERSION="3.1"
 
 RUN apt-get update && \
     apt-get install -y ca-certificates \
@@ -38,6 +39,7 @@ RUN mkdir $HOME/.tmux && \
     ln -s $HOME/dev_env/vim/plugins.vim         $HOME/.plugins.vim && \
     ln -s $HOME/dev_env/tmux/tmux.conf          $HOME/.tmux.conf && \
     ln -s $HOME/dev_env/bash/bash_profile.bash  $HOME/.bash_profile && \
+    ln -s $HOME/dev_env/bash/bash_aliases.bash  $HOME/.bash_aliases && \
     ln -s $HOME/dev_env/tmux/tmux_git_branch.rb $HOME/.tmux/ && \
     ln -s $HOME/dev_env/git/gitconfig           $HOME/.gitconfig && \
     ln -s $HOME/dev_env/git/gitaliases          $HOME/.gitaliases
