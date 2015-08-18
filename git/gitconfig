@@ -4,7 +4,7 @@
   path = ~/.gitaliases
 [color]
   diff = auto
-  status = auto
+  status = always
   branch = auto
   interactive = auto
   ui = auto
