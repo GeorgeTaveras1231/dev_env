@@ -72,12 +72,6 @@ vnoremap [ :<c-u>normal! `><cr>a]<Esc>:<c-u>normal! `<<cr>i[<Esc>el
 vnoremap { :<c-u>normal! `><cr>a}<Esc>:<c-u>normal! `<<cr>i{<Esc>el
 vnoremap <Space> :<c-u>normal! `><cr>a <Esc>:<c-u>normal! `<<cr>i <Esc>el
 
-inoremap <Esc>   <nop>
-nnoremap <Up>    2<C-w>+
-nnoremap <Down>  2<C-w>-
-nnoremap <Left>  2<C-w><
-nnoremap <Right> 2<C-w>>
-
 nnoremap { :tabprev<cr>
 nnoremap <C-t> :tabnew<cr>
 nnoremap } :tabnext<cr>
