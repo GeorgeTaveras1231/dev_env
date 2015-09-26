@@ -3,7 +3,7 @@ let mapleader="\<Space>"
 " Colorscheme and customization -------------{{{
 set t_Co=256
 set background=dark
-colorscheme Monokai
+colorscheme Solarized
 
 augroup foldSpaceOrientedSyntax
   autocmd!
@@ -23,13 +23,6 @@ augroup toggleInsertMode " {{{
   autocmd insertLeave * hi CursorColumn ctermbg=233
 augroup END
 "}}}
-augroup changePanes "{{{
-  autocmd!
-  autocmd BufEnter * setlocal number
-  autocmd BufLeave * setlocal nonumber
-  setlocal number
-augroup END
-"}}}
 
 augroup trailingWhiteSpace
   autocmd!
@@ -47,7 +40,8 @@ endfunction
 
 command! MoveFile :call MoveFile()
 
-set numberwidth=5
+set numberwidth=3
+set number
 " key_mappings:
 
 nnoremap \| :NERDTreeToggle<CR>
@@ -81,7 +75,6 @@ nnoremap <Right> 2<C-w>>
 nnoremap { :tabprev<cr>
 nnoremap <C-t> :tabnew<cr>
 nnoremap } :tabnext<cr>
-
 
 nnoremap H ^
 nnoremap L $
@@ -164,7 +157,7 @@ hi OverLength ctermbg=1 ctermfg=white
 match OverLength /\%81v.\+/
 
 set colorcolumn=80
-set list listchars=tab:›•,trail:░,eol:¬
+set list listchars=tab:›≈,trail:░,eol:¬
 
 set laststatus=2
 
