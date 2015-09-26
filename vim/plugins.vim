@@ -33,6 +33,7 @@ Plugin 'vim-erlang/vim-erlang-runtime'
 Plugin 'othree/yajs.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
+Plugin 'freitass/todo.txt-vim'
 " }}}
 
 " Integration {{{
