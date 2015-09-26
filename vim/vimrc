@@ -118,12 +118,7 @@ nnoremap E ea
 nnoremap B bi
 nnoremap W wi
 
-nnoremap <Leader>r :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
-nnoremap <Leader>a :call RunAllSpecs()<CR>
-
-nnoremap <silent><leader>, :nohl<CR>
+nnoremap <silent><leader><leader> :nohl<CR>
 
 nnoremap <silent><leader>c :!ctags -R --languages=ruby --exclude=.git --exclude=log . &<CR>
 
@@ -144,7 +139,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 nnoremap <leader>ga :Gwrite<CR>:e<CR>
 nnoremap <leader>v :vs<CR>
-" Overides rspec nearest spec...
+
 nnoremap <leader>s :sp<CR>
 nnoremap <leader>e :e<CR>
 
@@ -202,10 +197,6 @@ set expandtab
 set smarttab
 
 set shell=/bin/sh
-
-if !empty($TMUX)
-  let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
-endif
 
 set hlsearch
 set incsearch
