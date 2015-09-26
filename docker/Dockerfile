@@ -36,6 +36,7 @@ RUN git clone git@github.com:GeorgeTaveras1231/dev_env.git $HOME/dev_env
 
 RUN mkdir $HOME/.tmux && \
     ln -s $HOME/dev_env/vim/vimrc               $HOME/.vimrc && \
+    ln -s $HOME/dev_env/vim/ftplugin            $HOME/.vim/ftplugin && \
     ln -s $HOME/dev_env/vim/plugins.vim         $HOME/.plugins.vim && \
     ln -s $HOME/dev_env/tmux/tmux.conf          $HOME/.tmux.conf && \
     ln -s $HOME/dev_env/bash/bash_profile.bash  $HOME/.bash_profile && \
