@@ -34,7 +34,7 @@ RUN ssh-keyscan git.xogrp.com >> $HOME/.ssh/known_hosts
 
 RUN git clone git@github.com:GeorgeTaveras1231/dev_env.git $HOME/dev_env
 
-RUN mkdir $HOME/.tmux && \
+RUN mkdir $HOME/.tmux $HOME/.vim && \
     ln -s $HOME/dev_env/vim/vimrc               $HOME/.vimrc && \
     ln -s $HOME/dev_env/vim/ftplugin            $HOME/.vim/ftplugin && \
     ln -s $HOME/dev_env/vim/plugins.vim         $HOME/.plugins.vim && \
