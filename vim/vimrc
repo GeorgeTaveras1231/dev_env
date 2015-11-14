@@ -3,7 +3,7 @@ let mapleader="\<Space>"
 " Colorscheme and customization -------------{{{
 set t_Co=256
 set background=dark
-colorscheme Solarized
+colorscheme Monokai
 
 augroup foldSpaceOrientedSyntax
   autocmd!
