@@ -6,10 +6,11 @@
 | Shortcut | Description |
 |----------|-------------|
 | `space` `ev` | Edit vimrc |
-| `shift` `\` | Toggle Nerd Tree visibility |
+| `shift` `\` | Toggle Nerd Tree visibility, See help by typing `?` |
 | `space` `w` | Save current file |
 | `space` `y` | Copy to system clipboard |
 | `space` `p` | Paste from system clipboard |
+| `space` `e` | Refresh current pane/window |
 
 ### Tmux Shortcuts
 * `C-a` is the leader for most custom commands
