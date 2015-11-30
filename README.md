@@ -8,8 +8,16 @@
 | `space` `ev` | Edit vimrc |
 | `shift` `\` | Toggle Nerd Tree visibility |
 | `space` `w` | Save current file |
+| `space` `y` | Copy to system clipboard |
+| `space` `p` | Paste from system clipboard |
 
 ### Tmux Shortcuts
+* `C-a` is the leader for most custom commands
+
+| Shortcut | Description |
+|----------|-------------|
+| `C-a` `a` | Enter copy mode, use vi keys to navigate |
+| `C-a` `g` | Open git status pane, requires `watch` command |
 
 ## TODO
 - [ ] Expand custom shortcut list
