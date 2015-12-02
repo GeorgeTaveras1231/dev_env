@@ -136,6 +136,8 @@ nnoremap <leader>v :vs<CR>
 nnoremap <leader>s :sp<CR>
 nnoremap <leader>e :e<CR>
 
+nmap tm <Plug>SetTmuxVars
+
 " force vp to not replace buffer
 function! RestoreRegister()
   let @" = s:restore_reg
