@@ -11,6 +11,7 @@
 | `space` `y` | Copy to system clipboard |
 | `space` `p` | Paste from system clipboard |
 | `space` `e` | Refresh current pane/window |
+| `space` `o` | Fuzzy file finder |
 
 ### Tmux Shortcuts
 * `C-a` is the leader for most custom commands
@@ -19,6 +20,7 @@
 |----------|-------------|
 | `C-a` `a` | Enter copy mode, use vi keys to navigate |
 | `C-a` `g` | Open git status pane, requires `watch` command |
+| `C-a` `shift`+ vi-keys | Resize current pane |
 
 ## TODO
 - [ ] Expand custom shortcut list
