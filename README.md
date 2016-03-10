@@ -37,7 +37,7 @@
 
 ```
 brew update
-brew install git tmux vim
+brew install git tmux vim the_silver_searcher
 ```
 
 ## Setup
