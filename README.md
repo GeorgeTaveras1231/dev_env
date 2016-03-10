@@ -12,6 +12,7 @@
 | `space` `p` | Paste from system clipboard |
 | `space` `e` | Refresh current pane/window |
 | `space` `o` | Fuzzy file finder |
+| `space` `space` | Cancel highlight |
 
 ### Tmux Shortcuts
 * `C-a` is the leader for most custom commands
