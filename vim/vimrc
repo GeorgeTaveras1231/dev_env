@@ -180,7 +180,7 @@ hi CursorColumn cterm=NONE ctermbg=233
 hi CursorLine   cterm=NONE ctermbg=234
 
 let g:indentLine_char='┊'
-let g:indentLine_color_term = 239
+let g:indentLine_color_term=239
 
 " disable fold for now
 set nofoldenable
@@ -195,10 +195,9 @@ set shell=/bin/sh
 
 set hlsearch
 set incsearch
+set backspace=2
 
 let g:airline#extensions#tabline#enabled = 1
-
-set backspace=2
 
 let g:ctrlp_use_caching = 0
 set grepprg=ag\ --nogroup\ --nocolor
