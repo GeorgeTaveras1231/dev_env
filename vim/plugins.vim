@@ -21,7 +21,6 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'bling/vim-airline'
 Plugin 'blueyed/vim-diminactive'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 " }}}
 
 " Langs {{{
@@ -34,6 +33,7 @@ Plugin 'othree/yajs.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'freitass/todo.txt-vim'
+Plugin 'digitaltoad/vim-pug'
 " }}}
 
 " Integration {{{
@@ -54,6 +54,8 @@ Plugin 'jgdavey/tslime.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
 Plugin 'rking/ag.vim'
+
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " }}}
 "}}}
 " All of your Plugins must be added before the following line

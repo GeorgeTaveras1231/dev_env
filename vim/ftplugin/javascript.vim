@@ -1,6 +1,8 @@
-inoremap <buffer> -><Space> function () {}<Esc>i
+let b:javascript_fold=1
+set colorcolumn=100
 
 abbreviate funciton function
 
-let b:javascript_fold=1
-
+inoremap <buffer> -><Space> function () {}<Esc>i
+nnoremap ; A;<Esc>
+vnoremap ; :s/\(.\)$/\1;/g<CR>:nohl<CR>
