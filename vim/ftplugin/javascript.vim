@@ -1,4 +1,6 @@
 inoremap <buffer> -><Space> function () {}<Esc>i
-inoremap <buffer> =><Space> function () {}<Esc>F(i
+
+abbreviate funciton function
 
 let b:javascript_fold=1
+
