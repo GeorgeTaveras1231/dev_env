@@ -13,6 +13,9 @@ if !empty($TMUX)
 
   " Build escript
   nnoremap <leader>b :call Send_to_Tmux("mix escript.build\n")<CR>
+
+  " Execute current file
+  nnoremap <leader>r :call Send_to_Tmux("mix run " . expand("%") . "\n")<CR>
 endif
 
 inoremap pry require IEx<Enter>IEx.pry
