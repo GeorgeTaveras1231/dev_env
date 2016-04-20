@@ -58,12 +58,13 @@ inoremap jk <Esc>
 
 nnoremap <silent> <leader>h :Dash<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-"  ------FLY-----
+
 vnoremap " :<c-u>normal! `><cr>a"<Esc>:<c-u>normal! `<<cr>i"<Esc>el
 vnoremap ' :<c-u>normal! `><cr>a'<Esc>:<c-u>normal! `<<cr>i'<Esc>el
 vnoremap ( :<c-u>normal! `><cr>a)<Esc>:<c-u>normal! `<<cr>i(<Esc>el
 vnoremap [ :<c-u>normal! `><cr>a]<Esc>:<c-u>normal! `<<cr>i[<Esc>el
 vnoremap { :<c-u>normal! `><cr>a}<Esc>:<c-u>normal! `<<cr>i{<Esc>el
+vnoremap ` :<c-u>normal! `><cr>a`<Esc>:<c-u>normal! `<<cr>i`<Esc>el
 vnoremap <Space> :<c-u>normal! `><cr>a <Esc>:<c-u>normal! `<<cr>i <Esc>el
 
 inoremap <Esc>   <nop>
@@ -207,3 +208,10 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 hi Search ctermbg=44B449
 
 let g:ctrlp_show_hidden = 1
+
+let g:ruby_heredoc_syntax_filetypes = {
+  \"yaml" : {
+  \     "start" : "YAML"
+  \}
+\}
+
