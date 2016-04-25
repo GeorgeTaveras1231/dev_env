@@ -17,7 +17,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Visual {{{
 Plugin 'flazz/vim-colorschemes'
-Plugin 'Yggdroot/indentLine'
 Plugin 'bling/vim-airline'
 Plugin 'blueyed/vim-diminactive'
 Plugin 'airblade/vim-gitgutter'
