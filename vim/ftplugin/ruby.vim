@@ -10,3 +10,4 @@ if !empty($TMUX)
 endif
 
 set foldmethod=syntax
+
