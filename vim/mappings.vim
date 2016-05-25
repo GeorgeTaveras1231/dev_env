@@ -1,4 +1,15 @@
 let mapleader="\<Space>"
+" force vp to not replace buffer
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+
 nnoremap \| :NERDTreeToggle<CR>
 
 "MAPPINGS move lines of text up and down {{{

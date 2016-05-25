@@ -32,16 +32,6 @@ augroup END
 
 set numberwidth=3
 set number
-" force vp to not replace buffer
-function! RestoreRegister()
-  let @" = s:restore_reg
-  return ''
-endfunction
-
-function! s:Repl()
-  let s:restore_reg = @"
-  return "p@=RestoreRegister()\<cr>"
-endfunction
 
 set colorcolumn=80
 set list listchars=tab:›≈,trail:░,eol:¬
