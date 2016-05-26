@@ -1,5 +1,5 @@
-source ~/.plugins.vim
-source ~/.mappings.vim
+source ~/.vim/scripts/plugins.vim
+source ~/.vim/scripts/mappings.vim
 
 " Colorscheme and customization -------------{{{
 set t_Co=256
