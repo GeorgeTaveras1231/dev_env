@@ -3,8 +3,11 @@ source ~/.vim/scripts/mappings.vim
 
 " Colorscheme and customization -------------{{{
 set t_Co=256
+" colorscheme gruvbox
+" colorscheme github
+colorscheme solarized
+command AirlineTheme solarized
 set background=dark
-colorscheme Monokai
 
 augroup foldSpaceOrientedSyntax
   autocmd!
@@ -14,14 +17,14 @@ augroup END
 augroup cursorLineAndColumn
   autocmd!
   autocmd WinLeave * set nocursorline nocursorcolumn
-  autocmd WinEnter * set cursorline cursorcolumn
-  set cursorcolumn cursorline
+  " autocmd WinEnter * set cursorline cursorcolumn
+  " set cursorcolumn cursorline
 augroup END
 
 augroup toggleInsertMode " {{{
   autocmd!
-  autocmd insertEnter * hi CursorColumn ctermbg=darkred
-  autocmd insertLeave * hi CursorColumn ctermbg=233
+  " autocmd insertEnter * hi CursorColumn ctermbg=darkred
+  " autocmd insertLeave * hi CursorColumn ctermbg=233
 augroup END
 "}}}
 
@@ -51,8 +54,8 @@ set t_ut=
 
 hi NonText ctermbg=NONE
 
-hi CursorColumn cterm=NONE ctermbg=233
-hi CursorLine   cterm=NONE ctermbg=234
+" hi CursorColumn cterm=NONE ctermbg=233
+" hi CursorLine   cterm=NONE ctermbg=234
 
 " disable fold for now
 set nofoldenable
@@ -86,3 +89,12 @@ let g:ruby_heredoc_syntax_filetypes = {
   \}
 \}
 
+
+" embear/vim-localvimrc
+let g:localvimrc_ask=0
+let g:localvimrc_sandbox=0
+
+" scrooloose/syntastic
+let g:syntastic_cpp_compiler="clang++"
+let g:syntastic_cpp_compiler_options="-std=c++11 -stdlib=libc++ -Weverything -Wno-c++98-compat"
+let g:syntastic_cpp_check_header=1

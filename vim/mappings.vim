@@ -78,8 +78,6 @@ nnoremap W wi
 
 nnoremap <silent><leader><leader> :nohl<CR>
 
-nnoremap <silent><leader>c :!ctags -R --languages=ruby --exclude=.git --exclude=log . &<CR>
-
 nnoremap <leader>o :CtrlP<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
@@ -106,5 +104,5 @@ nmap tm <Plug>SetTmuxVars
 vmap <silent> <expr> p <sid>Repl()
 noremap gv `[v`]`
 
-nnoremap <C-c> :call ToggleComment()<CR>
-vnoremap <C-c> :call ToggleComment()<CR>
+" Easily swap background color
+nnoremap <leader>1 :let &background = ( &background == "dark" ? "light" : "dark" )<CR>

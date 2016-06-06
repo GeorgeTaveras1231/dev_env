@@ -12,8 +12,11 @@ call plug#begin('~/.vim/plugged')
 " Visual {{{
 Plug 'flazz/vim-colorschemes'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'blueyed/vim-diminactive'
 Plug 'airblade/vim-gitgutter'
+Plug 'embear/vim-localvimrc'
+
 " }}}
 
 " Langs {{{
@@ -47,6 +50,9 @@ Plug 'jgdavey/tslime.vim'
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
 Plug 'rking/ag.vim', { 'on': 'Ag' }
+
+Plug 'Shougo/vimproc.vim', { 'on': 'Dictionary' }
+Plug 'itchyny/dictionary.vim', { 'on': 'Dictionary' }
 "}}}
 "
 " All of your Plugs must be added before the following line

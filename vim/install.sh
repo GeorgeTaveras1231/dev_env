@@ -14,4 +14,5 @@ ln -s "$1/vim/mappings.vim" $HOME/.vim/scripts/mappings.vim
 ln -s "$1/vim/ftplugin" $HOME/.vim/ftplugin
 
 vim +PlugInstall +qall -u $HOME/.vim/scripts/plugins.vim
+vim +VimProcInstall +qall -u $HOME/.vim/scripts/plugins.vim
 
