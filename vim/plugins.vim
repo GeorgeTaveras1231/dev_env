@@ -44,7 +44,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 
 Plug 'rizzatti/dash.vim', { 'on': 'Dash' }
 Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-fugitive', { 'on': ['Gread', 'Gwrite'] }
+Plug 'tpope/vim-fugitive'
 Plug 'jgdavey/tslime.vim'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-endwise'
