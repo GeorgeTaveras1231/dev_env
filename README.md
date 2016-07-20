@@ -22,7 +22,7 @@
 | `C-a` `a` | Enter copy mode, use vi keys to navigate |
 | `C-a` `g` | Open git status pane, requires `watch` command |
 | `C-a` `shift`+ vi-keys | Resize current pane |
-| `C-a` `s` | Toggle sync mode |
+| `C-a` `C-s` | Toggle sync mode |
 
 ## TODO
 - [ ] Expand custom shortcut list
