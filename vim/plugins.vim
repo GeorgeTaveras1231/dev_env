@@ -25,6 +25,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
 Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'leafgarland/typescript-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'freitass/todo.txt-vim'
