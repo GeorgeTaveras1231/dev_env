@@ -29,6 +29,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'freitass/todo.txt-vim'
+Plug 'kchmck/vim-coffee-script'
 " }}}
 
 " Integration {{{
