@@ -11,6 +11,8 @@
 | `space` `y` | Copy to system clipboard |
 | `space` `p` | Paste from system clipboard |
 | `space` `e` | Refresh current pane/window |
+| `space` `o` | Fuzzy file finder |
+| `space` `space` | Cancel highlight |
 
 ### Tmux Shortcuts
 * `C-a` is the leader for most custom commands
@@ -19,6 +21,8 @@
 |----------|-------------|
 | `C-a` `a` | Enter copy mode, use vi keys to navigate |
 | `C-a` `g` | Open git status pane, requires `watch` command |
+| `C-a` `shift`+ vi-keys | Resize current pane |
+| `C-a` `C-s` | Toggle sync mode |
 
 ## TODO
 - [ ] Expand custom shortcut list
@@ -33,7 +37,7 @@
 
 ```
 brew update
-brew install git tmux vim
+brew install git tmux vim the_silver_searcher
 ```
 
 ## Setup
@@ -47,6 +51,7 @@ git clone git@github.com:GeorgeTaveras1231/dev_env.git
 
 ```
 cd dev_env
+./vim/install.sh $(pwd)
 ./install.sh
 ```
 
