@@ -1,0 +1,16 @@
+#! /usr/bin/env node
+
+if (process.argv[2] === "update") {
+  console.log("Updating brew...dup dip dap dip doop.");
+  process.exit(0);
+}
+
+if (process.argv[2] === "install") {
+  console.log("Installing dependencies...dup dip dap dip doop.");
+  console.log("Dependencies: ", process.argv.slice(3));
+  process.exit(0);
+}
+
+console.log('Something unexpected');
+console.log(process.argv);
+process.exit(1);

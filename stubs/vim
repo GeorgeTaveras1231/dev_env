@@ -1,0 +1,3 @@
+#! /usr/bin/env node
+
+console.log('Vim command: ', process.argv.slice(2));

@@ -51,7 +51,6 @@ git clone git@github.com:GeorgeTaveras1231/dev_env.git
 
 ```
 cd dev_env
-./vim/install.sh $(pwd)
 ./install.sh
 ```
 
