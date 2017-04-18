@@ -13,7 +13,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'flazz/vim-colorschemes'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'blueyed/vim-diminactive'
 Plug 'airblade/vim-gitgutter'
 Plug 'embear/vim-localvimrc'
 
@@ -48,7 +47,7 @@ Plug 'rizzatti/dash.vim', { 'on': 'Dash' }
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'jgdavey/tslime.vim'
-" Plug 'Valloric/YouCompleteMe'
+
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
 Plug 'rking/ag.vim', { 'on': 'Ag' }

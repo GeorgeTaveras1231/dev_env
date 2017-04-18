@@ -21,13 +21,6 @@ augroup cursorLineAndColumn
   set cursorcolumn cursorline
 augroup END
 
-augroup toggleInsertMode " {{{
-  autocmd!
-  autocmd insertEnter * hi CursorColumn ctermbg=darkred
-  autocmd insertLeave * hi CursorColumn ctermbg=233
-augroup END
-"}}}
-"
 au BufRead,BufNewFile Jenkinsfile set filetype=groovy
 
 augroup trailingWhiteSpace
