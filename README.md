@@ -47,6 +47,51 @@ brew install git tmux vim the_silver_searcher
 git clone git@github.com:GeorgeTaveras1231/dev_env.git
 ```
 
+### Dry-run
+
+Before running the install script, run the dry run script and make sure everything checks off
+
+The dry run output should look like:
+
+```
+/Users/you/code/dev_env/stubs/brew
+Installing dependencies...
+Updating brew...dup dip dap dip doop.
+Installing dependencies...dup dip dap dip doop.
+Dependencies:  [ 'git', 'tmux', 'vim', 'the_silver_searcher' ]
+Installing tmux
+Creating link:  [ '-s',
+  '/Users/you/code/dev_env/tmux/tmux.conf',
+  '/Users/you/.tmux.conf' ]
+Installing vim
+Making directory:  [ '-p', '/Users/you/.vim/scripts' ]
+Fetching with curl:  [ '-fLo',
+  '/Users/you/.vim/autoload/plug.vim',
+  '--create-dirs',
+  'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' ]
+Creating link:  [ '-s',
+  '/Users/you/code/dev_env/vim/vimrc',
+  '/Users/you/.vimrc' ]
+Creating link:  [ '-s',
+  '/Users/you/code/dev_env/vim/plugins.vim',
+  '/Users/you/.vim/scripts/plugins.vim' ]
+Creating link:  [ '-s',
+  '/Users/you/code/dev_env/vim/mappings.vim',
+  '/Users/you/.vim/scripts/mappings.vim' ]
+Creating link:  [ '-s',
+  '/Users/you/code/dev_env/vim/ftplugin',
+  '/Users/you/.vim/ftplugin' ]
+Vim command:  [ '+PlugInstall',
+  '+qall',
+  '-u',
+  '/Users/you/.vim/scripts/plugins.vim' ]
+Vim command:  [ '+VimProcInstall',
+  '+qall',
+  '-u',
+  '/Users/you/.vim/scripts/plugins.vim' ]
+```
+
+### Installation
 * Run the `install.sh` script provided
 
 ```
@@ -62,4 +107,3 @@ cd dev_env
 
 ### Verify tmux
 * Start `tmux` and observe new status bar at the bottom of terminal window.
-
