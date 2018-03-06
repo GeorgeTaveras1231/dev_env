@@ -10,9 +10,6 @@
   ui = auto
 [gc]
   auto = 1
-[user]
-  email = gtaveras@xogrp.com
-  name = George Taveras
 
 [core]
 	editor = vim

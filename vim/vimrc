@@ -14,13 +14,6 @@ augroup foldSpaceOrientedSyntax
   autocmd BufNewFile,BufReadPost *.{coffee,yml} setl foldmethod=indent
 augroup END
 
-augroup cursorLineAndColumn
-  autocmd!
-  autocmd WinLeave * set nocursorline nocursorcolumn
-  autocmd WinEnter * set cursorline cursorcolumn
-  set cursorcolumn cursorline
-augroup END
-
 au BufRead,BufNewFile Jenkinsfile set filetype=groovy
 
 augroup trailingWhiteSpace
@@ -89,7 +82,5 @@ let g:ruby_heredoc_syntax_filetypes = {
 let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
 
-" scrooloose/syntastic
-let g:syntastic_cpp_compiler="clang++"
-let g:syntastic_cpp_compiler_options="-std=c++11 -stdlib=libc++ -Weverything -Wno-c++98-compat"
-let g:syntastic_cpp_check_header=1
+" Mouse support
+set mouse=a

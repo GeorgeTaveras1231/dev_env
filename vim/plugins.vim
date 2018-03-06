@@ -14,8 +14,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'embear/vim-localvimrc'
-
 " }}}
 
 " Langs {{{
@@ -23,12 +21,13 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
 Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'othree/yajs.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'freitass/todo.txt-vim'
 Plug 'kchmck/vim-coffee-script'
+Plug 'flowtype/vim-flow'
 " }}}
 
 " Integration {{{
@@ -44,7 +43,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 
 Plug 'rizzatti/dash.vim', { 'on': 'Dash' }
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'jgdavey/tslime.vim'
 
@@ -54,6 +52,8 @@ Plug 'rking/ag.vim', { 'on': 'Ag' }
 
 Plug 'Shougo/vimproc.vim', { 'on': 'Dictionary' }
 Plug 'itchyny/dictionary.vim', { 'on': 'Dictionary' }
+
+Plug 'embear/vim-localvimrc'
 "}}}
 "
 " All of your Plugs must be added before the following line

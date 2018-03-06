@@ -1,8 +1,0 @@
-Host git.xogrp.com
-  HostName git.xogrp.com
-  User git
-  IdentityFile ~/.ssh/git.xogrp
-Host github.com
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/github

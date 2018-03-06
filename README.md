@@ -31,9 +31,11 @@
 * tmux
 * vim
 * git
+* watch
+* the_silver_searcher
 
 ### Mac OS X
-* Use `brew` to install dependencies
+* Use `brew` to install dependencies (Ignore this if planning to run ./install.sh)
 
 ```
 brew update
